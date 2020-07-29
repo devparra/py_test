@@ -1,6 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f23efe2-2451-476b-8429-0003f50f423b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AMZN.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BIDU.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FB.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GOOG.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GOOGL.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IBM.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/INTC.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MSFT.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MU.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NFLX.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NVDA.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ORCL.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PANDY.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PYPL.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SPOT.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TWTR.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XLNX.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FinETL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinETL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datalog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datalog.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fL5BY86ilDzNk44VQMpmHgL8Ec" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="web_data-package" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinETL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_data-package.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.web_data-package" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f23efe2-2451-476b-8429-0003f50f423b" name="Default Changelist" comment="" />
+      <created>1595984397714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595984397714</updated>
+    </task>
+    <task id="LOCAL-00001" summary="pycharm update">
+      <created>1595984823259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595984823259</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="pycharm update" />
+    <option name="LAST_COMMIT_MESSAGE" value="pycharm update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="79" y="505" width="912" height="907" key="CommitChangelistDialog2" timestamp="1595984823204">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state x="79" y="505" width="912" height="907" key="CommitChangelistDialog2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595984823204" />
+    <state x="312" y="717" width="424" height="484" key="FileChooserDialogImpl" timestamp="1595985402258">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state x="312" y="717" width="424" height="484" key="FileChooserDialogImpl/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595985402258" />
+    <state x="29" y="594" key="SettingsEditor" timestamp="1595985547077">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state x="29" y="594" key="SettingsEditor/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595985547077" />
+    <state x="135" y="695" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1595984830340">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state x="135" y="695" width="800" height="528" key="Vcs.Push.Dialog.v2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595984830340" />
+    <state x="311" y="874" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595986279451">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state x="311" y="874" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595986279451" />
   </component>
 </project>
