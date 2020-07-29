@@ -1,0 +1,22 @@
+
+Data export succesful! Friday August 23, 2019 04:44 PM
+Data export succesful! Friday August 23, 2019 04:46 PM
+cannot concatenate object of type "<class 'str'>"; only pd.Series, pd.DataFrame, and pd.Panel (deprecated) objs are valid Saturday August 24, 2019 05:58 PM
+cannot concatenate object of type "<class 'str'>"; only pd.Series, pd.DataFrame, and pd.Panel (deprecated) objs are valid Saturday August 24, 2019 06:01 PM
+'Tech Ticker' Saturday August 24, 2019 06:07 PM
+Data export succesful! Saturday August 24, 2019 06:10 PM
+Data export succesful! Saturday August 24, 2019 06:15 PM
+Data export succesful! Saturday August 24, 2019 06:19 PM
+'Bank Ticker' Saturday August 24, 2019 06:20 PM
+'Tech Ticker' Saturday August 24, 2019 06:21 PM
+'Tech Ticker' Saturday August 24, 2019 06:21 PM
+Data export succesful! Saturday August 24, 2019 06:22 PM
+cannot concatenate object of type "<class 'str'>"; only pd.Series, pd.DataFrame, and pd.Panel (deprecated) objs are valid Saturday August 24, 2019 06:25 PM
+cannot concatenate object of type "<class 'str'>"; only pd.Series, pd.DataFrame, and pd.Panel (deprecated) objs are valid Saturday August 24, 2019 06:26 PM
+first argument must be an iterable of pandas objects, you passed an object of type "DataFrame" Saturday August 24, 2019 06:28 PM
+Data export succesful! Saturday August 24, 2019 06:30 PM
+Data export succesful! Saturday August 24, 2019 06:31 PM
+Data export succesful! Monday August 26, 2019 03:54 PM
+Data export succesful! Monday August 26, 2019 04:01 PM
+Data export succesful! Monday August 26, 2019 04:38 PM
+Data export succesful! Monday August 26, 2019 04:40 PM
