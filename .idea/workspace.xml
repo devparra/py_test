@@ -21,24 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f23efe2-2451-476b-8429-0003f50f423b" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AMZN.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BIDU.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GOOG.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GOOGL.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IBM.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/INTC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSFT.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MU.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NFLX.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NVDA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ORCL.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PANDY.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PYPL.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SPOT.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TWTR.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/XLNX.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fin-etl_bot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/FinETL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinETL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datalog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datalog.txt" afterDir="false" />
@@ -47,6 +30,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +55,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.fin-etl_bot">
+    <configuration name="fin-etl_bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinETL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fin-etl_bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="web_data-package" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinETL" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.fin-etl_bot" />
         <item itemvalue="Python.web_data-package" />
       </list>
     </recent_temporary>
@@ -111,7 +123,28 @@
       <option name="project" value="LOCAL" />
       <updated>1595984823259</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="pycharm update">
+      <created>1595986334332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595986334332</updated>
+    </task>
+    <task id="LOCAL-00003" summary="pycharm update">
+      <created>1595986376417</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595986376417</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CSV add">
+      <created>1595986437506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595986437506</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,28 +161,45 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="pycharm update" />
-    <option name="LAST_COMMIT_MESSAGE" value="pycharm update" />
+    <MESSAGE value="CSV add" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSV add" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="79" y="505" width="912" height="907" key="CommitChangelistDialog2" timestamp="1595984823204">
+    <state x="79" y="505" width="912" height="907" key="CommitChangelistDialog2" timestamp="1595986437459">
       <screen x="0" y="283" width="1080" height="1637" />
     </state>
-    <state x="79" y="505" width="912" height="907" key="CommitChangelistDialog2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595984823204" />
+    <state x="79" y="505" width="912" height="907" key="CommitChangelistDialog2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595986437459" />
     <state x="312" y="717" width="424" height="484" key="FileChooserDialogImpl" timestamp="1595985402258">
       <screen x="0" y="283" width="1080" height="1637" />
     </state>
     <state x="312" y="717" width="424" height="484" key="FileChooserDialogImpl/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595985402258" />
+    <state width="1057" height="565" key="GridCell.Tab.0.bottom" timestamp="1595999521103">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state width="1057" height="565" key="GridCell.Tab.0.bottom/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595999521103" />
+    <state width="1057" height="565" key="GridCell.Tab.0.center" timestamp="1595999521103">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state width="1057" height="565" key="GridCell.Tab.0.center/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595999521103" />
+    <state width="1057" height="565" key="GridCell.Tab.0.left" timestamp="1595999521103">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state width="1057" height="565" key="GridCell.Tab.0.left/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595999521103" />
+    <state width="1057" height="565" key="GridCell.Tab.0.right" timestamp="1595999521103">
+      <screen x="0" y="283" width="1080" height="1637" />
+    </state>
+    <state width="1057" height="565" key="GridCell.Tab.0.right/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595999521103" />
     <state x="29" y="594" key="SettingsEditor" timestamp="1595985547077">
       <screen x="0" y="283" width="1080" height="1637" />
     </state>
     <state x="29" y="594" key="SettingsEditor/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595985547077" />
-    <state x="135" y="695" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1595984830340">
+    <state x="135" y="695" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1595986440499">
       <screen x="0" y="283" width="1080" height="1637" />
     </state>
-    <state x="135" y="695" width="800" height="528" key="Vcs.Push.Dialog.v2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595984830340" />
-    <state x="311" y="874" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595986279451">
+    <state x="135" y="695" width="800" height="528" key="Vcs.Push.Dialog.v2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595986440499" />
+    <state x="311" y="874" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596016022067">
       <screen x="0" y="283" width="1080" height="1637" />
     </state>
-    <state x="311" y="874" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1595986279451" />
+    <state x="311" y="874" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1080.256.2560.1080/0.283.1080.1637@0.283.1080.1637" timestamp="1596016022067" />
   </component>
 </project>
