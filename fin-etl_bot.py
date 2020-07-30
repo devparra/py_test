@@ -43,6 +43,7 @@ def package_exchange_data(stock, ex):
 # Main function for stock data
 def belwolf():
     # application flags
+    error_count = 0
     error_flag = False
     start_flag = True
 
@@ -55,8 +56,9 @@ def belwolf():
             print('Connected to Yahoo Finance ...')
             # main loop, wont stop until all data is collected
             while start_flag:
-                stock = input('Enter stock symbol: ')
-
+                stock = input('Enter stock symbol (Enter 0 to Exit): ')
+                if stock is '0':
+                    sys.exit(0)
                 # Universal function call iterating stock list
                 package_exchange_data(stock, 'yahoo')
                 # print time of post execution
@@ -64,10 +66,22 @@ def belwolf():
                 # once loop is done, set start flag to start
                 start_flag = False
 
-    except (requests.ConnectionError, requests.Timeout) as exception:
-
+    except (requests.ConnectionError, requests.Timeout) as exc:
+        if error_count > 3:
+            error = str('ERROR: FAILED CONNECTION - finance.yahoo.com')
+            # set data of error
+            date = time_stamp()
+            # designate error log
+            logfile = 'datalog.txt'
+            append = 'a'
+            # open log, write entry
+            with open(logfile, mode=append) as log:
+                log.write('\n' + error + ' ' + date)
+                log.close()
+            raise Exception('ERROR: CONNECTION COULD NOT BE ESTABLISHED')
+        error_count += 1
         # extract error
-        error = str(sys.exc_info()[1])
+        error = str('Warning: Failed connection - Reattempting - finance.yahoo.com')
         # set data of error
         date = time_stamp()
         # designate error log
@@ -77,10 +91,10 @@ def belwolf():
         with open(logfile, mode=append) as log:
             log.write('\n' + error + ' ' + date)
             log.close()
+
         # reattempt launching application
         print('WARNING: COULD NOT CONNECT TO YAHOO FINANCE\nReconnecting ...')
         belwolf()
-
     # catch exceptions
     except Exception:
         # extract error
