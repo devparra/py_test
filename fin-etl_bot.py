@@ -45,7 +45,6 @@ def belwolf():
     # application flags
     error_count = 0
     error_flag = False
-    start_flag = True
 
     url = 'https://finance.yahoo.com/'
 
@@ -55,18 +54,18 @@ def belwolf():
         if request:
             print('Connected to Yahoo Finance ...')
             # main loop, wont stop until all data is collected
-            while start_flag:
-                stock = input('Enter stock symbol (Enter 0 to Exit): ')
-                if stock is '0':
-                    sys.exit(0)
-                # Universal function call iterating stock list
-                package_exchange_data(stock, 'yahoo')
-                # print time of post execution
-                print(time_stamp())
-                # once loop is done, set start flag to start
-                start_flag = False
+            stock = input('Enter stock symbol (Enter 0 to Exit): ')
+            if stock is '0':
+                sys.exit(0)
+            # Universal function call iterating stock list
+            package_exchange_data(stock, 'yahoo')
+            # print time of post execution
+            print(time_stamp())
 
-    except (requests.ConnectionError, requests.Timeout) as exc:
+    except (requests.ConnectionError, requests.Timeout):
+
+        error_count += 1
+
         if error_count > 3:
             error = str('ERROR: FAILED CONNECTION - finance.yahoo.com')
             # set data of error
@@ -79,9 +78,9 @@ def belwolf():
                 log.write('\n' + error + ' ' + date)
                 log.close()
             raise Exception('ERROR: CONNECTION COULD NOT BE ESTABLISHED')
-        error_count += 1
+
         # extract error
-        error = str('Warning: Failed connection - Reattempting - finance.yahoo.com')
+        error = str('Warning: Failed connection - Reattempting: finance.yahoo.com')
         # set data of error
         date = time_stamp()
         # designate error log
@@ -94,7 +93,11 @@ def belwolf():
 
         # reattempt launching application
         print('WARNING: COULD NOT CONNECT TO YAHOO FINANCE\nReconnecting ...')
-        belwolf()
+
+        # MUST FIX, BROKEN!!!
+        belwolf()  # CANT CALL FUNCTION RECURSIVELY W\O BEING ENDLESS
+        # Need to create custom exception or create a way to add one to error flag each pass
+
     # catch exceptions
     except Exception:
         # extract error
