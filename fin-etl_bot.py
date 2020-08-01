@@ -11,6 +11,7 @@ import sys
 
 import requests
 from pandas_datareader import data
+from pandas_datareader._utils import RemoteDataError
 
 
 # procedural function for creating a timestamp
@@ -25,6 +26,18 @@ def time_stamp():
     # Format: WEEKDAY> <MONTH> <DATE>, <YEAR> <HOURS>:<MINUTES> <AM\PM>
     present_dt = str(date + ' ' + c_time)
     return present_dt
+
+
+def logger(message):
+    # set data of error
+    date = time_stamp()
+    # designate error log
+    logfile = 'datalog.txt'
+    append = 'a'
+    # open log, write entry
+    with open(logfile, mode=append) as log:
+        log.write('\n' + message + ' - ' + date)
+        log.close()
 
 
 # procedural data package function of data
@@ -43,8 +56,8 @@ def package_exchange_data(stock, ex):
 # Main function for stock data
 def belwolf():
     # application flags
-    error_count = 0
     error_flag = False
+    # net_error = NetFail()
 
     url = 'https://finance.yahoo.com/'
 
@@ -52,65 +65,42 @@ def belwolf():
         request = requests.get(url, timeout=5)
 
         if request:
-            print('Connected to Yahoo Finance ...')
+            print('\nConnected to Yahoo Finance ...')
             # main loop, wont stop until all data is collected
             stock = input('Enter stock symbol (Enter 0 to Exit): ')
-            if stock is '0':
+            if stock == '0':
+                logger('PROGRAM EXIT 0')
+                print('Exiting ...')
                 sys.exit(0)
-            # Universal function call iterating stock list
-            package_exchange_data(stock, 'yahoo')
-            # print time of post execution
-            print(time_stamp())
+            elif stock == '':
+                print('You didn\'t enter anything! Try again')
+                belwolf()
+            elif stock != '0' and stock == type(int):
+                print('Inappropriate input...\nTry again...')
+                belwolf()
+            else:
+                # Universal function call iterating stock list
+                package_exchange_data(stock, 'yahoo')
+                # print time of post execution
 
     except (requests.ConnectionError, requests.Timeout):
+        # Log error
+        logger(str(sys.exc_info()[:1]))
+        # set error flag to true
+        error_flag = True
+        # print error message to user
+        print('CONNECTION ERROR: finance.yahoo.com\nPlease check internet connection.')
 
-        error_count += 1
+    except RemoteDataError:
+        logger(str(sys.exc_info()[:1]))
+        print('COLLECTION ERROR: No Data found\nPlease check input and retry.')
+        error_flag = True
+        belwolf()
 
-        if error_count > 3:
-            error = str('ERROR: FAILED CONNECTION - finance.yahoo.com')
-            # set data of error
-            date = time_stamp()
-            # designate error log
-            logfile = 'datalog.txt'
-            append = 'a'
-            # open log, write entry
-            with open(logfile, mode=append) as log:
-                log.write('\n' + error + ' ' + date)
-                log.close()
-            raise Exception('ERROR: CONNECTION COULD NOT BE ESTABLISHED')
-
-        # extract error
-        error = str('Warning: Failed connection - Reattempting: finance.yahoo.com')
-        # set data of error
-        date = time_stamp()
-        # designate error log
-        logfile = 'datalog.txt'
-        append = 'a'
-        # open log, write entry
-        with open(logfile, mode=append) as log:
-            log.write('\n' + error + ' ' + date)
-            log.close()
-
-        # reattempt launching application
-        print('WARNING: COULD NOT CONNECT TO YAHOO FINANCE\nReconnecting ...')
-
-        # MUST FIX, BROKEN!!!
-        belwolf()  # CANT CALL FUNCTION RECURSIVELY W\O BEING ENDLESS
-        # Need to create custom exception or create a way to add one to error flag each pass
-
-    # catch exceptions
+    # catches general system exceptions
+    # Ignore warning of 'Exception too broad'
     except Exception:
-        # extract error
-        error = str(sys.exc_info()[1])
-        # set data of error
-        date = time_stamp()
-        # designate error log
-        logfile = 'datalog.txt'
-        append = 'a'
-        # open log, write entry
-        with open(logfile, mode=append) as log:
-            log.write('\n' + error + ' ' + date)
-            log.close()
+        logger(str(sys.exc_info()[1]))
         # set error flag to true
         error_flag = True
         # print error message
@@ -120,18 +110,9 @@ def belwolf():
 
     # final check of error flag
     if not error_flag:
-        # designate error log
-        logfile = 'datalog.txt'
-        append = 'a'
-        # set success log entry
-        notice = 'Data export successful!'
-        # set date
-        date = time_stamp()
-        # open log, set entry
-        with open(logfile, mode=append) as log:
-            log.write('\n' + notice + ' ' + date)
-            log.close()
-
+        logger('Data export successful!')
+        print('Data export successful! ' + time_stamp())
+        belwolf()
     return
 
 
