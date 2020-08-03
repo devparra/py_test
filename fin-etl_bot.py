@@ -14,6 +14,18 @@ from pandas_datareader import data
 from pandas_datareader._utils import RemoteDataError
 
 
+def py_val():
+    if not sys.version_info > (2, 7):
+        print('''January 1, 2020, was the day the sunset on Python 2. 
+        That means there will be no improvements after that day, even 
+        if someone finds a security problem. You should upgrade to 
+        Python 3 as soon as you can.''')
+    elif not sys.version_info >= (3, 7):
+        print('This application uses features from Python 3.7. Please update, thank you.')
+    elif sys.version_info > (3, 7):
+        print('Python Version validated...')
+
+
 # procedural function for creating a timestamp
 def time_stamp():
     # create current date and time variables
@@ -118,4 +130,5 @@ def belwolf():
 
 # Run main application
 if __name__ == '__main__':
+    py_val()
     belwolf()
