@@ -1,17 +1,6 @@
-####################################################################################
-# Bot building sandbox version 1
-#
-# This sandbox is meant for experimenting with automation (bots) and HackerRank
-# challenges
-#
-# - Beginning with web to data to function
-# - Next will be os to data to function
-# - Finally Bot autonomy
-#
-# This project will help flex python skills, critical thinking, data structure/api
-# and finally this project could help segway into other projects at scale
-#
-####################################################################################
+############################
+# Python Sandbox version 1 #
+############################
 
 
 # The OS module provides dozens of functions for interacting with an OS
@@ -120,9 +109,8 @@ def test_bot():
             log_entery.write('\n' + error + ' ' + date)
             log_entery.close()
         error_flag = True
-        print('''Oops! Something went wrong.'''
-              '''\nPlease check log for more information '''
-              '''and relaunch the program.''')
+        print('Oops! Something went wrong.')
+        print(date + ' ' + error)
     if not error_flag:
         date = dtstamp.timeStamp()
         print('\n' + date + '\nThank you.\n')
