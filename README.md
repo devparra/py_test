@@ -1,6 +1,6 @@
-# Python Testing
+# Custom Python Testing
 
-This repository will be used to build testing scripts for trouble shooting Python code.
+This repository will be used to build basic testing scripts for trouble shooting Python code.
 
 ## Dependencies
 
